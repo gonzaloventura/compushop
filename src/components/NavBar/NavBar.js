@@ -2,7 +2,6 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 function NavBar() {
@@ -13,7 +12,8 @@ function NavBar() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav>
-                <NavDropdown title="Categorías" id="basic-nav-dropdown">
+                <Button variant="primary" className='m-2'>Productos</Button>
+                {/* <NavDropdown title="Categorías" id="basic-nav-dropdown">
                   <NavDropdown.Item href="#">Componentes</NavDropdown.Item>
                   <NavDropdown.Item href="#">Monitores</NavDropdown.Item>
                   <NavDropdown.Item href="#">Consolas</NavDropdown.Item>
@@ -22,9 +22,9 @@ function NavBar() {
                   <NavDropdown.Item href="#" className='text-primary'>
                     Ofertas
                   </NavDropdown.Item>
-                </NavDropdown>
-                <Nav.Link href="#link">Armá tu PC</Nav.Link>
-                <Nav.Link href="#link">Ayuda</Nav.Link>
+                </NavDropdown> */}
+                <Button variant="secondary" className='m-2'>Armá tu PC</Button>
+                <Button variant="secondary" className='m-2'>Ayuda</Button>
               </Nav>
             </Navbar.Collapse>
       </Container>
