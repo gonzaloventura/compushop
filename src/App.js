@@ -16,11 +16,11 @@ function App() {
           />
         </div>
       </Container>
-      <Modal>
+      {/* <Modal>
       <ItemContainer 
           section='Productos destacados'
           />
-      </Modal>
+      </Modal> */}
     </div>
   );
 }
