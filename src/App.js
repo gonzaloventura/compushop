@@ -13,14 +13,14 @@ function App() {
     <div>
       <NavBar />
       <Container style={{marginTop: "80px"}}>
-        <HomeBanner title="¡Oferta Exclusiva!" description="Mirá todo lo que tenemos para vos" textBoton="Ver productos" botonVariant="primary" />
+        <HomeBanner title="¡Oferta Exclusiva!" description="Mirá todo lo que tenemos para vos" textBoton="Ver productos" botonVariant="primary" colorBanner="primary" />
         <ItemContainer section='Productos destacados'/>
         <Row style={{marginTop: "80px"}}>
            <Col>
-              <HomeBanner title="Nuevos Intel Core" description="Mirá todo lo que tenemos para vos!" textBoton="Ver productos" botonVariant="danger"  />
+              <HomeBanner title="Intel Core" description="Mirá todo lo que tenemos para vos" textBoton="Ver productos" botonVariant="light" colorBanner="light" />
           </Col>
           <Col>
-              <HomeBanner title="Nuevos Ryzen" description="Mirá todo lo que tenemos para vos!" textBoton="Ver productos" botonVariant="danger"  />
+              <HomeBanner title="AMD Ryzen" description="Mirá todo lo que tenemos para vos" textBoton="Ver productos" botonVariant="light" colorBanner="blackred"/>
             </Col>
         </Row>
       </Container>

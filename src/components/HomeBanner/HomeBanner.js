@@ -2,9 +2,9 @@ import React from 'react'
 import './HomeBanner.scss'
 import { Button, Container } from 'react-bootstrap';
 
-const HomeBanner = ({title, description, textBoton, botonVariant}) => {
+const HomeBanner = ({title, description, textBoton, botonVariant, colorBanner}) => {
     return (
-        <Container className='homebanner'>
+        <Container className={`homebanner homebanner-${colorBanner}`}>
         <div className='homebanner__content text-light'>
             <h1 className='homebanner__title'>
                 <strong>{title}</strong>
