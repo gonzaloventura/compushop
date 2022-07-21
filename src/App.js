@@ -24,8 +24,6 @@ function App() {
             </Col>
         </Row>
       </Container>
-      
-      
       {/* <Modal>
       <ItemContainer 
           section='Productos destacados'
