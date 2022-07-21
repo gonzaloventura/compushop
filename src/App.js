@@ -9,12 +9,8 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Container>
-        <div>
-          <ItemContainer 
-          section='Productos destacados'
-          />
-        </div>
+      <Container style={{marginTop: "80px"}}>
+        <ItemContainer section='Productos destacados'/>
       </Container>
       {/* <Modal>
       <ItemContainer 
