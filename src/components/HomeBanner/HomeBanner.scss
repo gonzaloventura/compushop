@@ -1,0 +1,19 @@
+.homebanner{
+    margin-bottom: 80px;
+    background: rgb(25,0,107);
+    background: linear-gradient(90deg, rgba(25,0,107,1) 29%, rgba(124,42,205,1) 100%);
+    padding: 10% 5%;
+    border-radius: 20px;
+}
+
+.homebanner__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.homebanner__description {
+    margin: 24px 0px;
+}

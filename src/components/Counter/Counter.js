@@ -34,9 +34,9 @@ function Counter() {
 
   return (
     <div className='counter'>
-            <Button onClick={removeNumber}>-</Button>
-            <h5 className='m-2'>{contador}</h5>
-            <Button onClick={addNumber}>+</Button>
+            <Button variant='secondary' onClick={removeNumber}>-</Button>
+            <h6 className='m-2'>{contador}</h6>
+            <Button variant='secondary' onClick={addNumber}>+</Button>
         </div>
   )
 }

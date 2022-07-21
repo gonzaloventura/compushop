@@ -1,4 +1,21 @@
-.card__comp img {
-    height: 250px;
-    object-fit: contain;
+.card__comp {
+    width: 18rem;
+    border-radius: 20px;
+    &:hover {
+        box-shadow: 0px 10px 20px rgb(235, 235, 235);
+    }
+
+    img {
+        height: 250px;
+        object-fit: contain;
+    }
+    
+}
+
+.card__buyit{
+    display: flex;
+}
+
+.card__comp__buyNow{
+    width: 100%;
 }
