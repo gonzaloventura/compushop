@@ -4,13 +4,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import './NavBar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping, faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
 function NavBar() {
   return (
     <Navbar bg="dark" variant='dark' expand="lg" className='shadow-sm navbar__section'>
       <Container>
-        <Navbar.Brand href="#home">CompuShop</Navbar.Brand>
+        <Navbar.Brand href="#home"><strong>CompuShop</strong></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav>
@@ -19,18 +19,6 @@ function NavBar() {
                   <li><Button variant='dark'>Armá tu PC</Button></li>
                   <li><Button variant='dark'>Ayuda</Button></li>
                 </ul>
-                
-                {/* <NavDropdown title="Categorías" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#">Componentes</NavDropdown.Item>
-                  <NavDropdown.Item href="#">Monitores</NavDropdown.Item>
-                  <NavDropdown.Item href="#">Consolas</NavDropdown.Item>
-                  <NavDropdown.Item href="#">Accesorios</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#" className='text-primary'>
-                    Ofertas
-                  </NavDropdown.Item>
-                </NavDropdown> */}
-
               </Nav>
               <div className='cart__widget'>
                 <Button variant="dark"><FontAwesomeIcon icon={faCartShopping} /></Button>

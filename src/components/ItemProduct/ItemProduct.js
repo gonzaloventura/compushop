@@ -1,8 +1,8 @@
 import React from 'react'
 import './ItemProduct.scss'
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
+import { Card, Button, Row, Col } from 'react-bootstrap'
 import Counter from '../Counter/Counter'
+
 
 function ItemProduct({ title, price, image }) {//traigo los props que le paso al componente
   return (
@@ -14,13 +14,18 @@ function ItemProduct({ title, price, image }) {//traigo los props que le paso al
         </Card.Title>
         <span className='pt-2 pb-2'>{price}</span>
         <div className='card__buyit'>
-          <div className="col-5">
-            <Counter/>
-          </div>
-          <div className="col-7">
-          <Button className='card__comp__buyNow' variant="dark">Comprar</Button>
-          </div>
+            <div className="col-5">
+              <Counter/>
+            </div>
+            <div className="col-7">
+            <Button className='card__comp__buyNow' variant="dark">Agregar </Button>
+            </div>
         </div>
+        <Row className='mt-2'>
+            <Col>
+              <Button className='card__comp__buyNow' variant="primary">Comprar Ahora</Button>
+            </Col>
+          </Row>
         
     </Card>
   )
