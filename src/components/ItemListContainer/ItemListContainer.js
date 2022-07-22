@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "./ItemContainer.scss";
+import "./ItemListCointainer.scss";
 import ItemProduct from "../ItemProduct/ItemProduct";
 import products from "../../utils/products.mock.js";
 import { Spinner } from "react-bootstrap";
 
-function ItemContainer({ section }) {
+function ItemListCointainer({ section }) {
   const [listProducts, setListProducts] = useState([]);
 
   const getProducts = new Promise((resolve, reject) => {
@@ -46,4 +46,4 @@ function ItemContainer({ section }) {
   );
 }
 
-export default ItemContainer;
+export default ItemListCointainer;

@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './custom.scss';
 import NavBar from './components/NavBar/NavBar';
 import Container from 'react-bootstrap/Container';
-import ItemContainer from './components/ItemContainer/ItemContainer';
+import ItemListCointainer from './components/ItemListCointainer/ItemListCointainer';
 import Modal from './components/Modal/Modal';
 import HomeBanner from './components/HomeBanner/HomeBanner';
 import Row from 'react-bootstrap/Row';
@@ -14,7 +14,7 @@ function App() {
       <NavBar />
       <Container style={{marginTop: "80px"}}>
         <HomeBanner title="¡Oferta Exclusiva!" description="Mirá todo lo que tenemos para vos" textBoton="Ver productos" botonVariant="primary" colorBanner="primary" />
-        <ItemContainer section='Productos destacados'/>
+        <ItemListCointainer section='Productos destacados'/>
         <Row style={{marginTop: "80px"}}>
            <Col className='col-12 col-lg-6'>
               <HomeBanner title="Intel Core" description="Mirá todo lo que tenemos para vos" textBoton="Ver productos" botonVariant="light" colorBanner="light" />
@@ -25,7 +25,7 @@ function App() {
         </Row>
       </Container>
       {/* <Modal>
-      <ItemContainer 
+      <ItemListCointainer 
           section='Productos destacados'
           />
       </Modal> */}

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Button from 'react-bootstrap/Button'
 
-function Counter({maxValue}) {
+function ItemCount({maxValue}) {
     const [contador, setContador] = useState(1);
 
     const addNumber = () =>{
@@ -37,7 +37,7 @@ function Counter({maxValue}) {
     
 
   return (
-    <div className='counter'>
+    <div className='ItemCount'>
             <Button variant='secondary' onClick={removeNumber}>-</Button>
             <h6 className='m-2'>{contador}</h6>
             <Button variant='secondary' onClick={addNumber}>+</Button>
@@ -45,4 +45,4 @@ function Counter({maxValue}) {
   )
 }
 
-export default Counter
+export default ItemCount
