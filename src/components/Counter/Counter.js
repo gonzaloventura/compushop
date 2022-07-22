@@ -1,11 +1,15 @@
 import React, {useState, useEffect} from 'react'
 import Button from 'react-bootstrap/Button'
 
-function Counter() {
+function Counter({maxValue}) {
     const [contador, setContador] = useState(1);
 
     const addNumber = () =>{
-      setContador(contador + 1);
+      if(contador < maxValue) {
+        setContador(contador + 1)
+      } else {
+        setContador(contador)
+      };
     }
   
     const removeNumber = () =>{
@@ -13,7 +17,7 @@ function Counter() {
     }
 
     useEffect( () => {
-        console.log("Actualizacion");
+        // console.log("Actualizacion");
     }, [contador])
 
       //1. Mount -> Crea

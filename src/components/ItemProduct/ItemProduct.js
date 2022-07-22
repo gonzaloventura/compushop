@@ -1,24 +1,47 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './ItemProduct.scss'
 import { Card, Button, Row, Col } from 'react-bootstrap'
 import Counter from '../Counter/Counter'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartShopping, faTruck } from '@fortawesome/free-solid-svg-icons'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
-function ItemProduct({ title, price, image }) {//traigo los props que le paso al componente
+function ItemProduct({ data }) {//traigo los props que le paso al componente
+  const [addToCart, setAddToCart] = useState();
+
+  const handleAddToCart = () => {
+    let text = "Agregado al carrito";
+    toast.success(text, {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      });
+  }
+
+  const { id, title, description, price, old_price, image, stock, free_shipping } = data;
   return (
-    <Card className='p-3 card__comp'>
-        <img src={`assets/${image}`} alt={title}/>
+    <>
+    <ToastContainer />
+    
+    <Card className='mt-4 p-3 card__comp'>
+        {free_shipping ? <><span className='card__comp__enviogratis'><FontAwesomeIcon icon={faTruck}/> Envío gratis</span></> : null}
+        <img src={`${image}`} alt={title}/>
         <Card.Title 
-        className='pt-2 '>
+        className='pt-4'>
             {title}
         </Card.Title>
-        <span className='pt-2 pb-2'>{price}</span>
+        <h4 className='pt-2 pb-2'><strong>{price}</strong> <span style={{fontSize:'16px'}}><del>{old_price}</del></span></h4>
         <div className='card__buyit'>
             <div className="col-5">
-              <Counter/>
+              <Counter maxValue={stock}/>
             </div>
             <div className="col-7">
-            <Button className='card__comp__buyNow' variant="dark">Agregar </Button>
+            <Button className='card__comp__addToCart' variant="dark" onClick={handleAddToCart}><FontAwesomeIcon icon={faCartShopping} /></Button>
             </div>
         </div>
         <Row className='mt-2'>
@@ -26,8 +49,8 @@ function ItemProduct({ title, price, image }) {//traigo los props que le paso al
               <Button className='card__comp__buyNow' variant="primary">Comprar Ahora</Button>
             </Col>
           </Row>
-        
     </Card>
+    </>
   )
 }
 

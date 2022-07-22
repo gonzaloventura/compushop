@@ -5,12 +5,21 @@
 }
 
 .listProducts{
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 2rem;
 }
 
 .counter{
   display: flex;
+}
+
+.products__listing{
+  display: flex;
+  justify-content: space-around;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

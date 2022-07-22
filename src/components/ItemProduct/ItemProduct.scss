@@ -1,5 +1,4 @@
 .card__comp {
-    width: 18rem;
     border-radius: 20px;
     transition: .25s ease-in-out;
     &:hover {
@@ -21,4 +20,20 @@
 .card__comp__buyNow{
     width: 100%;
 }
+
+.card__comp__addToCart{
+    width: 100%;
+}
+
+.card__comp__enviogratis{
+    font-size: 12px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #008010bd;
+    color: #deffe2;
+    padding: 6px 12px;
+    border-radius: 12px;
+}
+
 
