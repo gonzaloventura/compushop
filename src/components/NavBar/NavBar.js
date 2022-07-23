@@ -2,9 +2,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
+import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.scss';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 
 function NavBar() {
   return (
@@ -20,9 +19,7 @@ function NavBar() {
                   <li><Button variant='dark'>Ayuda</Button></li>
                 </ul>
               </Nav>
-              <div className='cart__widget'>
-                <Button variant="dark"><FontAwesomeIcon icon={faCartShopping} /></Button>
-              </div>
+              <CartWidget />
             </Navbar.Collapse>
       </Container>
     </Navbar>

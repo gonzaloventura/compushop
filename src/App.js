@@ -7,6 +7,7 @@ import Modal from './components/Modal/Modal';
 import HomeBanner from './components/HomeBanner/HomeBanner';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 function App() {
   return (
