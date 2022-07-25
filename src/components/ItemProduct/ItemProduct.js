@@ -15,9 +15,10 @@ function ItemProduct({ data }) {//traigo los props que le paso al componente
     let text = "Agregado " + title + " al carrito";
     toast.success(text, {
       position: "top-right",
-      autoClose: 2000,
-      hideProgressBar: true,
-      closeOnClick: true,
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeButton: false,
+      closeOnClick: false,
       pauseOnHover: false,
       draggable: false,
       });
@@ -27,7 +28,6 @@ function ItemProduct({ data }) {//traigo los props que le paso al componente
   return (
     <>
     <ToastContainer />
-    
     <Card className='mt-4 p-3 card__comp'>
         {free_shipping ? <><span className='card__comp__enviogratis'><FontAwesomeIcon icon={faTruck}/> Envío gratis</span></> : null}
         <img src={`${image}`} alt={title}/>
