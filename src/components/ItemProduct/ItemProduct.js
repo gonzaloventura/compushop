@@ -12,7 +12,7 @@ function ItemProduct({ data }) {//traigo los props que le paso al componente
   const [addToCart, setAddToCart] = useState();
 
   const handleAddToCart = () => {
-    let text = "Agregado al carrito";
+    let text = "Agregado " + title + " al carrito";
     toast.success(text, {
       position: "top-right",
       autoClose: 2000,

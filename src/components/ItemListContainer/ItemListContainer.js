@@ -31,7 +31,7 @@ function ItemListContainer({ section }) {
         listProducts.length ? 
         ( //si en products no hay nada, el valor será "0" y en ese caso, un cero se puede interpretar como un valor booleano por lo cual se considerará como falso
           listProducts.map((product) => (
-            <div className="col-12 col-lg-3 listProducts"> 
+            <div className="col-12 col-lg-3 listProducts">
               <ItemProduct key={product.id} data={product} />
             </div>
           ))
