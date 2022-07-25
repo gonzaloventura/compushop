@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 function ItemProduct({ data }) {//traigo los props que le paso al componente
+  const { id, title, description, price, old_price, image, stock, free_shipping } = data;
   const [addToCart, setAddToCart] = useState();
 
   const handleAddToCart = () => {
@@ -25,8 +26,7 @@ function ItemProduct({ data }) {//traigo los props que le paso al componente
       pauseOnFocusLoss: false
       });
   }
-
-  const { id, title, description, price, old_price, image, stock, free_shipping } = data;
+  
   return (
     <>
     <Card className='mt-4 p-3 card__comp'>
