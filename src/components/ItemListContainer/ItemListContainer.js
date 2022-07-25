@@ -10,7 +10,7 @@ function ItemListContainer({ section }) {
   const getProducts = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(products);
-    }, 1000);
+    }, 2000);
   });
 
   useEffect(() => {
