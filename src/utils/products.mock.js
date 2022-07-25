@@ -17,7 +17,7 @@ const products = [
       old_price: '$199.99',
       image: '/assets/i5.webp',
       stock: 6,
-      free_shipping: false
+      free_shipping: true
     },
     {
       id: 2,
@@ -34,11 +34,21 @@ const products = [
       title: 'Ryzen 9 5900x',
       description: 'Procesador high-level de AMD',
       price: '$349.99',
-      old_price: '$399.99',
+      old_price: '',
       image: '/assets/ryzen95900x.webp',
       stock: 8,
-      free_shipping: true
+      free_shipping: false
     },
+    {
+      id: 4,
+      title: 'Ryzen 9 5600x',
+      description: 'Procesador mid-level de AMD',
+      price: '$249.99',
+      old_price: '$299.99',
+      image: '/assets/ryzen55600x.webp',
+      stock: 17,
+      free_shipping: false
+    }
   ];
 
   export default products

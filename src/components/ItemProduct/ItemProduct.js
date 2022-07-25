@@ -17,17 +17,18 @@ function ItemProduct({ data }) {//traigo los props que le paso al componente
       position: "top-right",
       autoClose: 1500,
       hideProgressBar: false,
-      closeButton: false,
       closeOnClick: false,
       pauseOnHover: false,
       draggable: false,
+      progress: undefined,
+      closeButton: false,
+      pauseOnFocusLoss: false
       });
   }
 
   const { id, title, description, price, old_price, image, stock, free_shipping } = data;
   return (
     <>
-    <ToastContainer />
     <Card className='mt-4 p-3 card__comp'>
         {free_shipping ? <><span className='card__comp__enviogratis'><FontAwesomeIcon icon={faTruck}/> Envío gratis</span></> : null}
         <img src={`${image}`} alt={title}/>
@@ -50,6 +51,7 @@ function ItemProduct({ data }) {//traigo los props que le paso al componente
             </Col>
           </Row>
     </Card>
+    <ToastContainer />
     </>
   )
 }
