@@ -3,6 +3,7 @@ import "./ItemListContainer.scss";
 import ItemProduct from "../ItemProduct/ItemProduct";
 import products from "../../utils/products.mock.js";
 import { Spinner } from "react-bootstrap";
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 
 function ItemListContainer({ section }) {
   const [listProducts, setListProducts] = useState([]);
@@ -10,7 +11,7 @@ function ItemListContainer({ section }) {
   const getProducts = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(products);
-    }, 2000);
+    }, 1000);
   });
 
   useEffect(() => {
@@ -28,8 +29,8 @@ function ItemListContainer({ section }) {
       <h2>{section}</h2>
       <div className="row row-cols-4 mt-3 mb-5">
       {
-        listProducts.length ? 
-        ( //si en products no hay nada, el valor será "0" y en ese caso, un cero se puede interpretar como un valor booleano por lo cual se considerará como falso
+        listProducts.length > 0 ? 
+        (
           listProducts.map((product) => (
             <div className="col-12 col-lg-3 listProducts">
               <ItemProduct key={product.id} data={product} />

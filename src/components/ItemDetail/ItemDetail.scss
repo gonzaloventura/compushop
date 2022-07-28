@@ -1,0 +1,25 @@
+.productos__destacados{
+    h2{
+      font-weight: 600;
+    }
+  }
+  
+  .listProducts{
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .ItemCount{
+    display: flex;
+  }
+  
+  .products__listing{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
