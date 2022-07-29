@@ -1,15 +1,28 @@
 .itemdetail__card{
-  h2 {
+    .mySwiper{
+        text-align: center;
+        .swiper-slide{
+            img{
+                max-width: 500px;
+            }
+            @media screen and (max-width: 768px){
+                img{
+                    max-width: 250px;
+                }
+            }
+        }
+    }
+    h2 {
+        font-weight: 600;
+    }
+    h4 {
       font-weight: 600;
-  }
-  h4 {
-      font-weight: 600;
-  }
-  .old_price {
+    }
+    .old_price {
           text-decoration: line-through;
           color: #ccc;
       }
-  .prices{
+    .prices{
       display: inline-block;
       .price{
           font-size: 28px;
@@ -20,9 +33,9 @@
           font-weight: 400;
           color: green;
       }
-  }
-  .buttons{
+    }
+    .buttons{
       display: inline-flex;
-  }
+    }
 }
 

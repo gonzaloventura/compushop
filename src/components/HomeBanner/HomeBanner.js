@@ -4,7 +4,7 @@ import { Button, Container } from 'react-bootstrap';
 
 const HomeBanner = ({title, description, textBoton, botonVariant, colorBanner}) => {
     return (
-        <Container className={`homebanner homebanner-${colorBanner}`}>
+        <Container className={`homebanner homebanner-${colorBanner} homebanner__image`}>
         <div className='homebanner__content text-light'>
             <h1 className='homebanner__title'>
                 <strong>{title}</strong>

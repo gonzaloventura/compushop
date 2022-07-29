@@ -1,11 +1,15 @@
 import React, {useState} from 'react'
 import './ItemDetail.scss'
-import { Card, Row, Col, Button } from 'react-bootstrap'
+import { Card, Row, Col, Button, Image } from 'react-bootstrap'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faShoppingCart, faTruck} from '@fortawesome/free-solid-svg-icons'
 import ItemCount from '../ItemCount/ItemCount'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
 
 function ItemDetail({data}) {
     const { id, title, description, price, old_price, image, stock, free_shipping } = data;
@@ -14,7 +18,11 @@ function ItemDetail({data}) {
     <Card className='itemdetail__card'>
         <Row>
             <Col className='col-12 col-lg-8 center'>
-                <Card.Img variant="top" src={image} />
+            <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+                <SwiperSlide><Image src={image} /></SwiperSlide>
+                <SwiperSlide><Image src={image} /></SwiperSlide>
+            </Swiper>
+                
             </Col>
             <Col className='col-12 col-lg-4 center'>
                 <Card.Body>

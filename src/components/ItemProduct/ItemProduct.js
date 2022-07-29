@@ -33,7 +33,9 @@ function ItemProduct({ data }) {//traigo los props que le paso al componente
     <Card className='mt-4 p-3 card__comp'>
       <Link to={`/product/${id}`}>
           {free_shipping ? <><span className='card__comp__enviogratis'><FontAwesomeIcon icon={faTruck}/> Envío gratis</span></> : null}
+          <div className='card__comp__img'>
           <img src={`${image}`} alt={title}/>
+          </div>
           <Card.Title 
           className='pt-4'>
               {title}

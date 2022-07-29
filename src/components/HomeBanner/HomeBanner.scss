@@ -10,13 +10,15 @@
 }
 
 .homebanner-blackred{
-    background-color: #cd6f6f;
-    background-image: linear-gradient(147deg, #cd6f6f 0%, #a81313 74%);
+    background: linear-gradient(147deg, #cd6f6fd0 0%, #a81313a1 74%),url('../../../public/assets/homebanner/amd.webp');
+    background-size: cover;  
+    background-position: center;  
 }
 
 .homebanner-light{
-    background-color: #1e8bcb;
-    background-image: linear-gradient(334deg, #1e8bcb 0%, #2adaf5 100%);
+    background: linear-gradient(334deg, #1e8bcbd0 0%, #2adaf5a1 100%), url('../../../public/assets/homebanner/intel.webp');;
+    background-size: cover;
+    background-position: center;
 }
 
 .homebanner__content{

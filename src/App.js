@@ -7,6 +7,7 @@ import Products from './pages/Products';
 import Contact from './pages/Contact';
 import ErrorPage from './pages/ErrorPage';
 import Details from './pages/Details';
+import Category from './pages/Category';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/product" element={<Products />} />
           <Route path="/product/:id" element={<Details />} />
+          <Route path="/:category" element={<Category />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>

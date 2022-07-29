@@ -5,6 +5,7 @@ import ItemListContainer from '../components/ItemListContainer/ItemListContainer
 import HomeBanner from '../components/HomeBanner/HomeBanner';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -13,10 +14,14 @@ function Home() {
     <ItemListContainer section='Productos destacados'/>
     <Row style={{marginTop: "80px"}}>
       <Col className='col-12 col-lg-6'>
+        <Link to="/procesadores/intel">
           <HomeBanner title="Intel Core" description="Mirá todo lo que tenemos para vos" textBoton="Ver productos" botonVariant="light" colorBanner="light" />
+        </Link>
       </Col>
       <Col className='col-12 col-lg-6'>
+        <Link to="/procesadores/amd">
           <HomeBanner title="AMD Ryzen" description="Mirá todo lo que tenemos para vos" textBoton="Ver productos" botonVariant="light" colorBanner="blackred"/>
+        </Link>
         </Col>
     </Row>
   </Container>
