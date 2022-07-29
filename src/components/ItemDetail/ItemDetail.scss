@@ -1,25 +1,28 @@
-.productos__destacados{
-    h2{
+.itemdetail__card{
+  h2 {
       font-weight: 600;
-    }
   }
-  
-  .listProducts{
-    flex-wrap: wrap;
-    justify-content: space-between;
+  h4 {
+      font-weight: 600;
   }
-  
-  .ItemCount{
-    display: flex;
+  .old_price {
+          text-decoration: line-through;
+          color: #ccc;
+      }
+  .prices{
+      display: inline-block;
+      .price{
+          font-size: 28px;
+          font-weight: 600;
+      }
+      .discount{
+          font-size: 16px;
+          font-weight: 400;
+          color: green;
+      }
   }
-  
-  .products__listing{
-    display: flex;
-    justify-content: space-around;
+  .buttons{
+      display: inline-flex;
   }
-  
-  .center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+}
+

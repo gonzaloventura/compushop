@@ -6,7 +6,7 @@ import ItemListContainer from '../components/ItemListContainer/ItemListContainer
 function Contact() {
   return (
     <Container className='app_container'>
-        <ItemDetailContainer />
+        <ItemListContainer section='Productos destacados'/>
     </Container>
   )
 }

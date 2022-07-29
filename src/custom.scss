@@ -63,3 +63,13 @@
 .app_container{
   margin-top: 80px;
 }
+
+.errorpage__center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  height: 90vh;
+  align-content: center;
+}
