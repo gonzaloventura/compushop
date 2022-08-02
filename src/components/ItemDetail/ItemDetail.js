@@ -1,37 +1,56 @@
-import React, {useState} from 'react'
-import './ItemDetail.scss'
+import React, {useState, useEffect} from 'react'
+import { useParams } from 'react-router-dom'
 import { Card, Row, Col, Button, Image } from 'react-bootstrap'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faShoppingCart, faTruck} from '@fortawesome/free-solid-svg-icons'
-import ItemCount from '../ItemCount/ItemCount'
 import { ToastContainer, toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper";
+import products from '../../utils/products.mock.js'
+import ItemCount from '../ItemCount/ItemCount'
+import './ItemDetail.scss'
+import 'react-toastify/dist/ReactToastify.css'
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper";
 
 function ItemDetail({data}) {
-    const { id, title, description, price, old_price, image, stock, free_shipping } = data;
+    const { id } = useParams();
+    const [galleryImages, setGalleryImages] = useState([]);
+  
+    useEffect(() => {
+        getProductById()
+    }, []);
+    
+    const getProductById = () => {
+        setGalleryImages(products.find(product => product.id == id).gallery);
+    }
+
+    console.log(galleryImages);
   return (
     <>
     <Card className='itemdetail__card'>
         <Row>
             <Col className='col-12 col-lg-8 center'>
-            <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-                <SwiperSlide><Image src={image} /></SwiperSlide>
-                <SwiperSlide><Image src={image} /></SwiperSlide>
+            <Swiper navigation={true} modules={[Navigation]} className="mySwiper itemdetail__card__swiper">
+                <SwiperSlide className='itemdetail__card__swiper'>
+                    <Image src={data.image} className='itemdetail__card__image' />
+                </SwiperSlide>
+                {galleryImages.map((image, index) => (
+                    <SwiperSlide key={index} className='itemdetail__card__swiper'>
+                        <Image src={image} className='itemdetail__card__image' />
+                    </SwiperSlide>
+                ))}
             </Swiper>
                 
             </Col>
             <Col className='col-12 col-lg-4 center'>
                 <Card.Body>
-                    <h2>{title}</h2>
-                    <p>{description}</p>
-                    <span className='old_price'>{old_price}</span>
+                    <h2>{data.title}</h2>
+                    <p>{data.description}</p>
+                    <span className='old_price'>{data.old_price}</span>
                     <br/>
                     <div className='prices'>
-                        <span className='price'>{price}</span>
+                        <span className='price'>{data.price}</span>
                         <span className='discount'>-15% OFF</span>
                     </div>
                     <br/>
@@ -41,7 +60,7 @@ function ItemDetail({data}) {
                     <br/>
                     <div>
                         <span>Cantidad:</span>
-                    <ItemCount maxValue={stock}/>
+                    <ItemCount maxValue={data.stock}/>
                     </div>
                     <br/>
                     <div className='buttons'>

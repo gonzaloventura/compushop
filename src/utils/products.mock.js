@@ -6,10 +6,11 @@ const products = [
       price: '$129.99',
       old_price: '',
       image: '/assets/i3.webp',
+      gallery: ['/assets/palit3060ti/01.webp', '/assets/palit3060ti/02.webp'],
       stock: 14,
       free_shipping: false,
       brand: 'Intel',
-      category: 'Procesadores',
+      category: 'Procesadores'
     },
     {
       id: 1,
@@ -18,10 +19,11 @@ const products = [
       price: '$174.99',
       old_price: '$199.99',
       image: '/assets/i5.webp',
+      gallery: ['/assets/palit3060ti/01.webp', '/assets/palit3060ti/02.webp'],
       stock: 6,
       free_shipping: true,
       brand: 'Intel',
-      category: 'Procesadores',
+      category: 'Procesadores'
     },
     {
       id: 2,
@@ -30,10 +32,11 @@ const products = [
       price: '$329.99',
       old_price: '$349.99',
       image: '/assets/i7.webp',
+      gallery: ['/assets/palit3060ti/01.webp', '/assets/palit3060ti/02.webp'],
       stock: 4,
       free_shipping: true,
       brand: 'Intel',
-      category: 'Procesadores',
+      category: 'Procesadores'
     },
     {
       id: 3,
@@ -42,6 +45,7 @@ const products = [
       price: '$349.99',
       old_price: '',
       image: '/assets/ryzen95900x.webp',
+      gallery: ['/assets/palit3060ti/01.webp', '/assets/palit3060ti/02.webp'],
       stock: 8,
       free_shipping: false,
       brand: 'AMD',
@@ -54,10 +58,24 @@ const products = [
       price: '$249.99',
       old_price: '$299.99',
       image: '/assets/ryzen55600x.webp',
+      gallery: ['/assets/palit3060ti/01.webp', '/assets/palit3060ti/02.webp'],
       stock: 17,
       free_shipping: false,
       brand: 'AMD',
-      category: 'Procesadores',
+      category: 'Procesadores'
+    },
+    {
+      id: 5,
+      title: 'PALIT NVIDIA GEFORCE RTX 3060TI LHR',
+      description: 'PLACA DE VIDEO PALIT NVIDIA GEFORCE RTX 3060 TI DUAL 8GB GDDR6 256BIT LHR',
+      price: '$549.99',
+      old_price: '',
+      image: '/assets/palit3060ti/00.webp',
+      gallery: ['/assets/palit3060ti/01.webp', '/assets/palit3060ti/02.webp'],
+      stock: 8,
+      free_shipping: true,
+      brand: 'NVIDIA',
+      category: 'Placas de Video'
     }
   ];
 

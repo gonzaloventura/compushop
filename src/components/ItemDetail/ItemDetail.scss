@@ -39,3 +39,11 @@
     }
 }
 
+.itemdetail__card__swiper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .swiper-slide{
+        height: 500px;
+    }
+}
