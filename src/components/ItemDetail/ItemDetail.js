@@ -46,6 +46,7 @@ function ItemDetail({data}) {
             <Col className='col-12 col-lg-4 center'>
                 <Card.Body>
                     <h2>{data.title}</h2>
+                    <span className='category'>{data.category}</span>
                     <p>{data.description}</p>
                     <span className='old_price'>{data.old_price}</span>
                     <br/>
