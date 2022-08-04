@@ -1,27 +1,18 @@
-// import React, { useEffect, useState } from 'react'
-// import './ItemDetailContainer.scss'
-// import ItemDetail from '../ItemDetail/ItemDetail'
-// import products from '../../utils/products.mock'
-// import { useParams } from 'react-router-dom'
-// import { Container } from 'react-bootstrap'
+import React from 'react'
+import { useParams } from 'react-router-dom'
+import { Container } from 'react-bootstrap'
+import products from '../utils/products.mock';
+import ItemListContainer from '../components/ItemListContainer/ItemListContainer';
 
-// function Category() {
-//     const [product, setProduct] = useState({});
-//   const { id } = useParams();
+function Category() {
+    const { category } = useParams();
+    const categoryName = products.find(product => product.category_slug === category);
 
-//   useEffect( () => {
-//     getProductById()
-//   }
-//   , [id])
+  return (
+    <Container className='app_container'>
+        <ItemListContainer section={categoryName.category} />
+    </Container>
+  )
+}
 
-//   function getProductById() {
-//     setProduct(products.find(product => product.id == id));
-//   }
-//   return (
-//     <Container className='app_container'>
-//         <h2></h2>
-//     </Container>
-//   )
-// }
-
-// export default Category
+export default Category

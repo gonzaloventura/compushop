@@ -1,7 +1,11 @@
-.ItemCount {
+.itemcount {
     display: flex;
     h6{
         min-width: 20px;
         text-align: center;
+    }
+    .cart__button{
+        margin: 0px 0px 0px 10px;
+        width: 100%;
     }
 }

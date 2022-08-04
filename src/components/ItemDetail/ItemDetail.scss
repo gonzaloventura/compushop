@@ -33,13 +33,15 @@
           font-weight: 600;
       }
       .discount{
+            margin: 0px 10px;
           font-size: 16px;
           font-weight: 400;
           color: green;
       }
     }
-    .buttons{
-      display: inline-flex;
+    .buy__now{
+        margin: 10px 0px;
+      width: 100%;
     }
 }
 

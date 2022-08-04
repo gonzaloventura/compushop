@@ -3,15 +3,26 @@ import "./ItemListContainer.scss";
 import ItemProduct from "../ItemProduct/ItemProduct";
 import products from "../../utils/products.mock.js";
 import { Spinner } from "react-bootstrap";
+import { useParams } from "react-router-dom";
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 
-function ItemListContainer({ section }) {
+function ItemListContainer({ section, data }) {
+  const { category } = useParams();
+  const { brand } = useParams();
   const [listProducts, setListProducts] = useState([]);
 
+  const listCategory = products.filter(product => product.category_slug === category);
+
   const getProducts = new Promise((resolve, reject) => {
+    if (category){
+      setTimeout(() => {
+      resolve(listCategory)
+      }, 250);
+    } else {
     setTimeout(() => {
       resolve(products);
     }, 250);
+    }
   });
 
   useEffect(() => {
@@ -32,9 +43,7 @@ function ItemListContainer({ section }) {
         listProducts.length > 0 ? 
         (
           listProducts.map((product) => (
-            <div className="col-12 col-lg-3 listProducts">
               <ItemProduct key={product.id} data={product} />
-            </div>
           ))
         ) 
         : 

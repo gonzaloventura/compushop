@@ -1,9 +1,14 @@
 import React, {useState, useEffect} from 'react'
 import Button from 'react-bootstrap/Button'
 import './ItemCount.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-function ItemCount({maxValue}) {
+function ItemCount({itemTitle, maxValue, setQuantitySelected}) {
     const [contador, setContador] = useState(1);
+
 
     const addNumber = () =>{
       if(contador < maxValue) {
@@ -35,14 +40,39 @@ function ItemCount({maxValue}) {
     //   useEffect( () => {
     //     return()=>{console.log("desmontaje")}
     //   })
+
+    const handleAddToCart = (contador) => {
+      let text = "Agregaste " + contador + " " + itemTitle + " al carrito";
+      toast.success(text, {
+        position: "top-right",
+        autoClose: 1500,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: false,
+        draggable: false,
+        progress: undefined,
+        closeButton: false,
+        pauseOnFocusLoss: false
+        });
+    }
     
 
+    const onAdd = () => {
+      setQuantitySelected(contador);
+      handleAddToCart(contador);
+    }
+
   return (
-    <div className='ItemCount'>
+    <>
+        <div className='itemcount'>
             <Button variant='secondary' onClick={removeNumber}>-</Button>
             <h6 className='m-2 itemcount__counter'>{contador}</h6>
             <Button variant='secondary' onClick={addNumber}>+</Button>
+            <Button className='cart__button' variant="dark" onClick={onAdd}><FontAwesomeIcon icon={faCartShopping} /></Button>
         </div>
+        
+        <ToastContainer />
+        </>
   )
 }
 
