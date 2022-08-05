@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { Card, Row, Col, Button, Image } from 'react-bootstrap'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faShoppingCart, faTruck} from '@fortawesome/free-solid-svg-icons'
-import { ToastContainer, toast } from 'react-toastify'
+import { ToastContainer } from 'react-toastify'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import products from '../../utils/products.mock.js'
@@ -60,7 +60,7 @@ function ItemDetail({data}) {
                     </div>
                     <br/>
                     <div>
-                    <ItemCount maxValue={data.stock} itemTitle={data.title} setQuantitySelected={setQuantitySelected}/>
+                    <ItemCount productData={data} setQuantitySelected={setQuantitySelected}/>
                     </div>
                     <Button className='buy__now'>
                         Comprar ahora

@@ -10,7 +10,7 @@ function Category() {
 
   return (
     <Container className='app_container'>
-        <ItemListContainer section={categoryName.category} />
+        {category ? <ItemListContainer section={categoryName.category} /> : <h1>Categorías</h1>}
     </Container>
   )
 }

@@ -33,7 +33,7 @@ function ItemListContainer({ section, data }) {
       .catch((err) => {
         console.log("la llamada falló");
       });
-  }, []);
+  } , [category, listProducts]);
 
   return (
     <section className="productos__destacados">

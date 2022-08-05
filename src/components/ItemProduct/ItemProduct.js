@@ -1,17 +1,29 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import './ItemProduct.scss'
 import { Card, Button, Row, Col } from 'react-bootstrap'
 import ItemCount from '../ItemCount/ItemCount'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faTruck } from '@fortawesome/free-solid-svg-icons'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 
 
 function ItemProduct({ data }) {//traigo los props que le paso al componente
   const { id, title, description, price, old_price, image, stock, free_shipping, category_slug } = data;
-  const [quantitySelected, setQuantitySelected] = useState(0)
+  const [quantitySelected, setQuantitySelected] = useState(1)
+  const { handleClick, name } = useContext(CartContext)
+
+  useEffect( () => {
+    console.log("Actualizacion")
+}, [quantitySelected])
+
+const addToCart = (e) => {
+  console.log("click Producto")
+  e.stopPropagation()
+}
+
 
   return (
     <div className="col-12 col-lg-3 listProducts">
@@ -28,7 +40,7 @@ function ItemProduct({ data }) {//traigo los props que le paso al componente
             <h4 className='pt-2 pb-2'><strong>${price}</strong> <span style={{fontSize:'16px'}}><del>{old_price ? "$" + old_price : ''}</del></span></h4>
         </Link>
             <div className='card__buyit'>
-                <ItemCount itemTitle={title} maxValue={stock} setQuantitySelected={setQuantitySelected}/>
+            <ItemCount productData={data} setQuantitySelected={setQuantitySelected} action={addToCart}/>
             </div>
             <Row className='mt-2'>
                 <Col>

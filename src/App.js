@@ -8,6 +8,9 @@ import Contact from './pages/Contact';
 import ErrorPage from './pages/ErrorPage';
 import Details from './pages/Details';
 import Category from './pages/Category';
+import Cart from './pages/Cart';
+import Checkout from './pages/Checkout';
+import CartProvider from './context/CartContext';
 
 function App() {
 
@@ -21,26 +24,25 @@ function App() {
   //   console.log(data);
   // })
 
-
+      // A
 
   return (
+    <CartProvider >
       <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/product" element={<Products />} />
-          <Route path="/:category/:id" element={<Details />} />
-          <Route path="/:category" element={<Category />} />
-          <Route path="/:category/:brand" element={<Category />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-      {/* <Modal>
-      <ItemListContainer 
-          section='Productos destacados'
-          />
-      </Modal> */}
-    </BrowserRouter>
+            <NavBar />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/products" element={<Products />} />
+              <Route path="/:category/:id" element={<Details />} />
+              <Route path="/:category" element={<Category />} />
+              <Route path="/:category/:brand" element={<Category />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/checkout" element={<Checkout />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<ErrorPage />} />
+            </Routes>
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 
