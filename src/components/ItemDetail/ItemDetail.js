@@ -48,7 +48,7 @@ function ItemDetail({data}) {
                     <h2>{data.title}</h2>
                     <Link to={`/${data.category_slug}`}><span className='category'>{data.category}</span></Link>
                     <p>{data.description}</p>
-                    <span className='old_price'>${data.old_price}</span>
+                    <span className='old_price'>{data.old_price ? "$" + data.old_price : ""}</span>
                     <br/>
                     <div className='prices'>
                         <span className='price'>${data.price}</span>
