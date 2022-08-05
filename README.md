@@ -19,4 +19,4 @@ Link del proyecto: [https://compushop.vercel.app/](https://compushop.vercel.app/
 - FontAwesome Icons
 
 # Navegación
-![Esta es una imagen](https://myoctocat.com/assets/images/base-octocat.svg)
+![Gif de Navegación](https://compushop.vercel.app/assets/navegacion.gif)
