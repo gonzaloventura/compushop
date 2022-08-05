@@ -1,14 +1,17 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useContext} from 'react'
 import Button from 'react-bootstrap/Button'
 import './ItemCount.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { CartContext } from "../../context/CartContext"
 
-function ItemCount({itemTitle, maxValue, setQuantitySelected}) {
+function ItemCount({productData, setQuantitySelected, action}) {
     const [contador, setContador] = useState(1);
+    const { addProductToCart } = useContext(CartContext)
 
+    const maxValue = productData.stock;
 
     const addNumber = () =>{
       if(contador < maxValue) {
@@ -42,7 +45,7 @@ function ItemCount({itemTitle, maxValue, setQuantitySelected}) {
     //   })
 
     const handleAddToCart = (contador) => {
-      let text = "Agregaste " + contador + " " + itemTitle + " al carrito";
+      let text = "Agregaste " + contador + " " + productData.title + " al carrito";
       toast.success(text, {
         position: "top-right",
         autoClose: 1500,
@@ -60,7 +63,9 @@ function ItemCount({itemTitle, maxValue, setQuantitySelected}) {
     const onAdd = () => {
       setQuantitySelected(contador);
       handleAddToCart(contador);
+      addProductToCart(productData);
     }
+
 
   return (
     <>
@@ -70,8 +75,6 @@ function ItemCount({itemTitle, maxValue, setQuantitySelected}) {
             <Button variant='secondary' onClick={addNumber}>+</Button>
             <Button className='cart__button' variant="dark" onClick={onAdd}><FontAwesomeIcon icon={faCartShopping} /></Button>
         </div>
-        
-        <ToastContainer />
         </>
   )
 }
