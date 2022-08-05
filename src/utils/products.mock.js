@@ -71,7 +71,7 @@ const products = [
     },
     {
       id: 5,
-      title: 'PALIT NVIDIA GEFORCE RTX 3060TI LHR',
+      title: 'NVIDIA GEFORCE RTX 3060TI LHR',
       description: 'PLACA DE VIDEO PALIT NVIDIA GEFORCE RTX 3060 TI DUAL 8GB GDDR6 256BIT LHR',
       price: '549.99',
       old_price: '',
@@ -85,7 +85,7 @@ const products = [
     },
     {
       id: 6,
-      title: 'PALIT GAMEROCK RTX 3080TI LHR',
+      title: 'GAMEROCK RTX 3080TI LHR',
       description: 'PLACA DE VIDEO PALIT NVIDIA GEFORCE RTX 3080TI GAMEROCK 12GB GDDR6 384BIT LHR',
       price: '899.99',
       old_price: '1099.99',
