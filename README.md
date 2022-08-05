@@ -20,3 +20,4 @@ Link del proyecto: [https://compushop.vercel.app/](https://compushop.vercel.app/
 
 # Navegación
 ![Gif de Navegación](https://compushop.vercel.app/assets/navegacion.gif)
+Link del [GIF](https://compushop.vercel.app/assets/navegacion.gif)
