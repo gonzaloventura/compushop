@@ -11,16 +11,13 @@ import { CartContext } from '../../context/CartContext';
 
 
 function ItemProduct({ data }) {//traigo los props que le paso al componente
-  const { id, title, description, price, old_price, image, stock, free_shipping, category_slug } = data;
+  const { id, title, brand, price, old_price, image, free_shipping, category_slug } = data;
   const [quantitySelected, setQuantitySelected] = useState(1)
-  const { handleClick, name } = useContext(CartContext)
 
   useEffect( () => {
-    console.log("Actualizacion")
 }, [quantitySelected])
 
 const addToCart = (e) => {
-  console.log("click Producto")
   e.stopPropagation()
 }
 
@@ -35,7 +32,7 @@ const addToCart = (e) => {
             </div>
             <Card.Title 
             className='pt-4'>
-                {title}
+                {brand} {title}
             </Card.Title>
             <h4 className='pt-2 pb-2'><strong>${price}</strong> <span style={{fontSize:'16px'}}><del>{old_price ? "$" + old_price : ''}</del></span></h4>
         </Link>

@@ -1,11 +1,13 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { Link } from 'react-router-dom'
 import {Card, Col, Row, Button} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import './CartProduct.scss'
+import { CartContext } from '../../context/CartContext';
 
 const CartProduct = ({data}) => {
+  const { removeProduct } = useContext(CartContext)
 
   return (
     <>
@@ -32,7 +34,7 @@ const CartProduct = ({data}) => {
               <span>$ {product.price}</span>
             </Col>
             <Col>
-              <Button variant='secondary'>
+              <Button variant='secondary' onClick={()=>{console.log("eliminar"); removeProduct(product.id);}}>
                 <FontAwesomeIcon icon={faTrash} />
               </Button>
             </Col>

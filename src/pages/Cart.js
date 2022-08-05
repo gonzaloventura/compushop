@@ -11,7 +11,14 @@ const Cart = () => {
     <Container className='app_container'>
         <h1>Carrito</h1>
         <Row>
-          <Col xl={8}><CartProduct data={cartProducts} /></Col>
+          <Col xl={8}>
+            {(
+              cartProducts.length ?
+              <CartProduct data={cartProducts} />
+              :
+              <span>No hay productos en el carrito</span>
+            )}
+          </Col>
           <Col xl={4}>
             <Card className='cart__card__right'>
               <div className='card__discountcode'>

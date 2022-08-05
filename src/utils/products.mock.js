@@ -11,7 +11,8 @@ const products = [
       free_shipping: false,
       brand: 'Intel',
       category: 'Procesadores',
-      category_slug: 'procesadores'
+      category_slug: 'procesadores',
+      count: 0
     },
     {
       id: 1,
@@ -25,7 +26,8 @@ const products = [
       free_shipping: true,
       brand: 'Intel',
       category: 'Procesadores',
-      category_slug: 'procesadores'
+      category_slug: 'procesadores',
+      count: 0
     },
     {
       id: 2,
@@ -39,7 +41,8 @@ const products = [
       free_shipping: false,
       brand: 'Intel',
       category: 'Procesadores',
-      category_slug: 'procesadores'
+      category_slug: 'procesadores',
+      count: 0
     },
     {
       id: 3,
@@ -53,7 +56,8 @@ const products = [
       free_shipping: true,
       brand: 'AMD',
       category: 'Procesadores',
-      category_slug: 'procesadores'
+      category_slug: 'procesadores',
+      count: 0
     },
     {
       id: 4,
@@ -67,7 +71,8 @@ const products = [
       free_shipping: false,
       brand: 'AMD',
       category: 'Procesadores',
-      category_slug: 'procesadores'
+      category_slug: 'procesadores',
+      count: 0
     },
     {
       id: 5,
@@ -81,7 +86,8 @@ const products = [
       free_shipping: true,
       brand: 'PALIT',
       category: 'Placas de Video',
-      category_slug: 'placas-de-video'
+      category_slug: 'placas-de-video',
+      count: 0
     },
     {
       id: 6,
@@ -95,7 +101,8 @@ const products = [
       free_shipping: true,
       brand: 'PALIT',
       category: 'Placas de Video',
-      category_slug: 'placas-de-video'
+      category_slug: 'placas-de-video',
+      count: 0
     }
   ];
 

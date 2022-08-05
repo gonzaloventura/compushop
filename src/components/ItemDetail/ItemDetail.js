@@ -45,7 +45,7 @@ function ItemDetail({data}) {
             </Col>
             <Col className='col-12 col-lg-4 center'>
                 <Card.Body>
-                    <h2>{data.title}</h2>
+                    <h2>{data.brand} {data.title}</h2>
                     <Link to={`/${data.category_slug}`}><span className='category'>{data.category}</span></Link>
                     <p>{data.description}</p>
                     <span className='old_price'>{data.old_price ? "$" + data.old_price : ""}</span>

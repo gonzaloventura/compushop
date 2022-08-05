@@ -6,18 +6,24 @@ const CartProvider = ({children}) => {
 const [cartProducts, setCartProducts] = useState([]);
 
 const addProductToCart = (product) => {
+  
   setCartProducts([...cartProducts, product])
 }
 
 const clear = () => {
-  setCartProducts([])
+  setCartProducts([]);
+}
+
+const removeProduct = (id) => {
+  const cartProductRemoved = cartProducts.filter((product => product.id !== id));
+  setCartProducts(cartProductRemoved);
 }
 
 const data = {
   cartProducts,
-  setCartProducts,
+  addProductToCart,
   clear,
-  addProductToCart
+  removeProduct
 }
 
   return (
