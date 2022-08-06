@@ -7,3 +7,26 @@
     justify-content: center;
     align-items: center;
 }
+
+.cart__price{
+    display: grid;
+    justify-items: center;
+    del{
+        color: #999;
+        font-size: 12px;
+    }
+    span {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+}
+
+.cart__counter{
+    display: flex;
+    justify-content: center;
+}
+
+.cart__category{
+    font-size: 14px;
+}

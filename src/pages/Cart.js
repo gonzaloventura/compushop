@@ -3,6 +3,7 @@ import {Container, Row, Col, Card} from 'react-bootstrap'
 import { CartContext } from '../context/CartContext';
 import CartProduct from '../components/CartProduct/CartProduct'
 import DiscountCode from '../components/DiscountCode/DiscountCode'
+import CartTotal from '../components/CartTotal/CartTotal';
 
 const Cart = () => {
   const { cartProducts } = useContext(CartContext)
@@ -20,10 +21,11 @@ const Cart = () => {
             )}
           </Col>
           <Col xl={4}>
-            <Card className='cart__card__right'>
+            <Card className='cart__card__right shadow-sm'>
               <div className='card__discountcode'>
                 <h6>Ingresar cupón de descuento</h6>
                 <DiscountCode />
+                <CartTotal />
               </div>
               
             </Card>

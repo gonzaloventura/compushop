@@ -12,28 +12,28 @@ const CartProduct = ({data}) => {
   return (
     <>
     {data.map(product => (
-        <Card className='cardproduct'>
+        <Card className='cardproduct shadow-sm' key={product.id}>
         <Card.Body>
           <Row className='card__cart__product'>
-            <Col>
-              <img width={'80%'} src={product.image}/>
+            <Col lg={2}>
+              <img alt='Imagen' width={'80%'} src={product.image}/>
             </Col>
             <Col>
               <h5>{product.brand} {product.title}</h5>
-              <span>Categoría: <Link to={`/${product.category_slug}`}>{product.category}</Link></span>
+              <span className='cart__category'>Categoría: <Link to={`/${product.category_slug}`}>{product.category}</Link></span>
             </Col>
-            <Col>
+            <Col lg={2} className="cart__counter">
               <div className='itemcount'>
                 <Button variant='secondary'>-</Button>
                 <h6 className='m-2 itemcount__counter'>1</h6>
                 <Button variant='secondary'>+</Button>
               </div>
             </Col>
-            <Col>
+            <Col lg={2} className="cart__price">
               {product.old_price ? <del>${product.old_price}</del> : ""}
-              <span>$ {product.price}</span>
+              <span className='cart__product__price'>${product.price}</span>
             </Col>
-            <Col>
+            <Col lg={1}>
               <Button variant='secondary' onClick={()=>{console.log("eliminar"); removeProduct(product.id);}}>
                 <FontAwesomeIcon icon={faTrash} />
               </Button>
