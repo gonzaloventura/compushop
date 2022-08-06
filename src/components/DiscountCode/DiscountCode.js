@@ -5,8 +5,8 @@ const DiscountCode = () => {
   return (
     <InputGroup>
         <Form.Control
-          placeholder="Código del cupón"
-          aria-label="Código del cupón"
+          placeholder="Cupón de descuento"
+          aria-label="Cupón de descuento"
           aria-describedby="DiscountCode"
         />
         <Button variant="primary" id="DiscountCode">

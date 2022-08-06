@@ -1,4 +1,18 @@
 .cart__total{
-    margin: 20px 0px;
-    text-align: center;
+    .dlist-align{
+        display: flex;
+        dd{
+            flex-grow: 1;
+            text-align: right;
+        }
+    }
+    dl {
+        margin: 10px 0px;
+    }
+    .cart__total__fee{
+        color: red;
+    }
+    .cart__total__discount{
+        color: green;
+    }
 }

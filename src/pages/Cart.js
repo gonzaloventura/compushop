@@ -23,8 +23,12 @@ const Cart = () => {
           <Col xl={4}>
             <Card className='cart__card__right shadow-sm'>
               <div className='card__discountcode'>
-                <h6>Ingresar cupón de descuento</h6>
                 <DiscountCode />
+              </div>
+              
+            </Card>
+            <Card className='cart__card__right shadow-sm'>
+              <div className='card__total'>
                 <CartTotal />
               </div>
               
