@@ -18,10 +18,9 @@ function CartWidget() {
     setAnchorEl(null);
   };
 
-  console.log(cartProducts);
-
   return (
     <div className='cart__widget'>
+      { (cartProducts.length > 0 ? <div className='counter'><span>{cartProducts.length}</span></div> : null)}
         <Button variant="dark"><FontAwesomeIcon icon={faCartShopping} /></Button>
     </div>
     
