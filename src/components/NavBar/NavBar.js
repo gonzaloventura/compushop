@@ -4,7 +4,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
-import { ButtonGroup } from 'react-bootstrap';
 import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.scss';
 import { Link } from 'react-router-dom';

@@ -103,6 +103,21 @@ const products = [
       category: 'Placas de Video',
       category_slug: 'placas-de-video',
       count: 0
+    },
+    {
+      id: 7,
+      title: 'X515EA I5 1135G7 8GB SSD',
+      description: 'Notebook Asus X515EA I5-1135G7 8GB DDR4 SSD 240GB NVMe M.2',
+      price: '399.99',
+      old_price: '499.99',
+      image: '/assets/asusX515EA.jpg',
+      gallery: [],
+      stock: 8,
+      free_shipping: true,
+      brand: 'ASUS',
+      category: 'Notebooks',
+      category_slug: 'notebooks',
+      count: 0
     }
   ];
 

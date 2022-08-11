@@ -3,12 +3,14 @@ import Button from 'react-bootstrap/Button'
 import './ItemCount.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import { CartContext } from "../../context/CartContext"
+import { Link } from 'react-router-dom'
 
 function ItemCount({productData, setQuantitySelected, action}) {
     const [contador, setContador] = useState(1);
+    const [productInCart, setProductInCart] = useState(false);
     const { addProductToCart } = useContext(CartContext)
 
     const maxValue = productData.stock;
@@ -64,17 +66,24 @@ function ItemCount({productData, setQuantitySelected, action}) {
       setQuantitySelected(contador);
       handleAddToCart(contador);
       addProductToCart(productData);
+      setProductInCart(true)
     }
 
 
   return (
     <>
-        <div className='itemcount'>
+    { productInCart ? 
+      <Button variant='secondary' className='cart__endbuy'><Link to="/cart">Finalizar compra</Link></Button>
+    :
+    <>
+    <div className='itemcount'>
             <Button variant='secondary' onClick={removeNumber}>-</Button>
             <h6 className='m-2 itemcount__counter'>{contador}</h6>
             <Button variant='secondary' onClick={addNumber}>+</Button>
             <Button className='cart__button' variant="dark" onClick={onAdd}><FontAwesomeIcon icon={faCartShopping} /></Button>
         </div>
+    </>
+  }
         </>
   )
 }
